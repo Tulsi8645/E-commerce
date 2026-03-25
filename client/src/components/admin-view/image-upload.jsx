@@ -50,7 +50,7 @@ function ProductImageUpload({
     const data = new FormData();
     data.append("image", imageFile);
     const response = await axios.post(
-      "http://localhost:5000/api/admin/images/upload",
+      `${import.meta.env.VITE_API_URL}/admin/images/upload`,
       data,
       { withCredentials: true }
     );
